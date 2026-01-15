@@ -3,6 +3,7 @@
 import { prisma } from "@/lib/db";
 import { nanoid } from "nanoid";
 import { revalidatePath } from "next/cache";
+import { cookies } from "next/headers";
 
 function normalizeUrl(urlStr: string): string {
   try {
@@ -22,6 +23,8 @@ function normalizeUrl(urlStr: string): string {
 }
 
 export async function createShortLink(formData: FormData) {
+  
+
   let originalUrl = formData.get("originalUrl") as string;
   originalUrl = originalUrl.trim(); 
 
@@ -47,6 +50,13 @@ export async function createShortLink(formData: FormData) {
     return { success: true, shortCode: existingLink.shortCode };
   }
 
+  const cookieStore = await cookies();
+  const userId = cookieStore.get("user_id")?.value;
+
+  if (!userId) {
+     return { error: "User session not found. Please refresh." };
+  }
+
   // CREATE NEW
   const shortCode = nanoid(6);
 
@@ -55,6 +65,7 @@ export async function createShortLink(formData: FormData) {
       data: {
         originalUrl: cleanUrl, 
         shortCode: shortCode,
+        userId: userId,
       },
     });
 

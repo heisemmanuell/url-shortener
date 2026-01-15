@@ -33,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={lexendDeca.className}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>
