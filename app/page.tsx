@@ -39,7 +39,7 @@ export default async function Home() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
           </span>&nbsp;
-          v1.0 Beta
+          v1.0.0 launched
         </div>
         <h1 className="text-7xl font-extrabold text-zinc-900 tracking-tighter mb-4 leading-tighter">
           Make your links <br/>
