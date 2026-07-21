@@ -67,7 +67,7 @@ export default async function Home() {
       </div>
 
       <footer className="mt-20 text-zinc-400 text-sm text-center relative z-10">
-        <p>© 2025 Kurtz. Built with Next.js, Prisma & Supabase.</p>
+        <p>© 2025 Kurtz. Built with Next.js, Prisma & Neon.</p>
       </footer>
     </main>
   );

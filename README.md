@@ -1,6 +1,6 @@
 # Kurtz - URL Shortener
 
-A minimalist URL shortener built with Next.js, Prisma, and Supabase. No ads, no tracking, just clean and efficient link shortening.
+A minimalist URL shortener built with Next.js, Prisma, and Neon. No ads, no tracking, just clean and efficient link shortening.
 
 ## Features
 
@@ -8,7 +8,7 @@ A minimalist URL shortener built with Next.js, Prisma, and Supabase. No ads, no 
 - **Live Dashboard**: Track your recent links with click counts and timestamps.
 - **Minimalist Design**: Clean, distraction-free UI with subtle animations.
 - **User Sessions**: Automatic user identification via cookies for link tracking.
-- **Database Backed**: Persistent storage with Prisma ORM and Supabase PostgreSQL.
+- **Database Backed**: Persistent storage with Prisma ORM and Neon PostgreSQL.
 - **Production Ready**: Optimized for deployment on Vercel or any Node.js host.
 
 ## Tech Stack
@@ -17,7 +17,7 @@ A minimalist URL shortener built with Next.js, Prisma, and Supabase. No ads, no 
 |-------|------------|
 | **Frontend** | Next.js , React , Tailwind CSS |
 | **Backend** | Next.js API Routes, Server Components |
-| **Database** | Prisma 7, Supabase (PostgreSQL) |
+| **Database** | Prisma 7, Neon (PostgreSQL) |
 | **Icons** | Lucide React |
 | **Deployment** | Vercel |
 
@@ -27,7 +27,7 @@ A minimalist URL shortener built with Next.js, Prisma, and Supabase. No ads, no 
 
 - Node.js 18+
 - Prisma
-- or Supabase account
+- Neon account
 - Git
 
 ### Installation
@@ -55,7 +55,7 @@ A minimalist URL shortener built with Next.js, Prisma, and Supabase. No ads, no 
    ```
    
    Get your `DATABASE_URL` from:
-   - **Supabase**: Project Settings → Database → Connection String
+   - **Neon**: Project Dashboard → Connection String
    - **Local PostgreSQL**: Format: `postgresql://user:password@localhost:5432/dbname`
 
 4. **Initialize the database**:
